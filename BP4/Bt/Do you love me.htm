@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>Do you love me ?</H1> <br>
+    <button onclick="functionAlert()" ;>Yes</button>
+    <button id="noBtn" onmouseover="nomouseover();" style="position: absolute; left: 100;top: 100">NO</button>
+
+    <script>
+        function functionAlert() {
+            alert('yes you must love me !');
+        }
+
+        function nomouseover() {
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            document.getElementById('noBtn').style.left = x + 'px';
+            document.getElementById('noBtn').style.top = y + 'px';
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var firstmoney = +prompt('first money ? ');
+        var month = +prompt('month ? ');
+        var percent = +prompt('percent ? (%)');
+
+        var aftermoney = firstmoney;
+
+        for (var i = 0; i < month; i++) {
+
+            aftermoney += aftermoney * percent / 100
+
+        }
+        alert(aftermoney);
+    </script>
+
+</body>
+
+</html>

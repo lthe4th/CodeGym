@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Good <br>
+    <input type="checkbox" id="good" onclick="checkgood();">
+    <br>
+    Cheap <br>
+    <input type="checkbox" id="cheap" onclick="checkcheap();">
+    <br>
+    Fast <br>
+    <input type="checkbox" id="fast" onclick="checkfast();">
+    <br>
+
+    <script>
+        function checkgood() {
+            var good = document.getElementById('good').checked;
+            var cheap = document.getElementById('cheap').checked;
+            var fast = document.getElementById('fast').checked;
+            if (good) {
+                if (cheap) {
+                    document.getElementById('fast').checked = false
+                }
+            }
+        }
+
+            function checkcheap() {
+                var good = document.getElementById('good').checked;
+                var cheap = document.getElementById('cheap').checked;
+                var fast = document.getElementById('fast').checked;
+                if (cheap) {
+                    if (fast) {
+                        document.getElementById('good').checked = false
+                    }
+                }
+            }
+
+                function checkfast() {
+                    var good = document.getElementById('good').checked;
+                    var cheap = document.getElementById('cheap').checked;
+                    var fast = document.getElementById('fast').checked;
+                    if (fast) {
+                        if (good) {
+                            document.getElementById('cheap').checked = false
+                        }
+                    }
+                }
+    </script>
+
+
+</body>
+
+</html>

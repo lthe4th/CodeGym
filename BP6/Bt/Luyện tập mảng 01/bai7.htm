@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="input1">
+    <button onclick="add()">add</button>
+    <br>
+    <input type="number" id="input2">
+    <button onclick="fix()">check-delete</button>
+    <script>
+        var array = [];
+
+        function add() {
+            var x = document.getElementById('input1').value;
+            if (x === "") {
+                return alert('invalid input');
+            }
+            array.push(x);
+        }
+
+        function fix() {
+            var x = document.getElementById('input2').value;
+            for (var i = 0; i < array.length; i++) {
+                if (x === array[i]) {
+                    array.splice(i,1);
+                    array.push(0);
+                    return;
+                }
+            }
+            document.write(array)
+        }
+    </script>
+</body>
+
+</html>

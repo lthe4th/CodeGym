@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    English &ensp;&ensp;&ensp;
+    <input type="text" id="English">
+    <button onclick="translatefunction()">translate</button>
+    <br>
+    VietNamese
+    <input type="text" id="VietNam" disabled> <br>
+    <script>
+        var English = ['hello', 'goodbye', 'yo WTF', 'good'];
+        var VietNam = ['xin chao', 'tam biet', 'clgt', 'tot'];
+
+        function translatefunction() {
+
+            var input = document.getElementById('English').value;
+            for (i = 0; i < English.length; i++) {
+                if (input === English[i]) {
+                    var index = i
+                }
+            }
+            document.getElementById('VietNam').value=VietNam[index]
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

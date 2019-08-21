@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var month = +prompt('month ? ');;
+        switch (month) {
+            case month = 1:
+            case month = 3:
+            case month = 5:
+            case month = 7:
+            case month = 10:
+            case month = 12:
+                alert('month ' + month + ' has 31 days');
+                break;
+            case month = 4:
+            case month = 6:
+            case month = 9:
+            case month = 11:
+                alert('month ' + month + ' has 30 days');
+                break;
+            case month = 2:
+                alert('month 2 has 28(29) days');
+                break;
+            default:
+                alert('i think we don\'t have that month');
+        }
+    </script>
+
+</body>
+
+</html>

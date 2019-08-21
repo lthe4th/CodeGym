@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1366" height="768" style="border: black solid 1px"></canvas>
+    <script>
+        function Circle(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.radius = r;
+        }
+
+        function randomHex() {
+            return Math.floor(Math.random() * 255)
+        }
+
+        function randomColor() {
+            var red = randomHex();
+            var cyan = randomHex();
+            var green = randomHex();
+            return "rgb(" + red + "," + cyan + "," + green + ")";
+
+        }
+
+        function renderCanvas() {
+            var canvas = document.getElementById('myCanvas').getContext('2d');
+            var r = Math.floor(Math.random() * 80);
+            var x = Math.floor(Math.random() * window.innerWidth);
+            var y = Math.floor(Math.random() * window.innerHeight);
+            var color = randomColor();
+            var circle = new Circle(x, y, r);
+            canvas.beginPath();
+            canvas.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            canvas.fillStyle = color;
+            canvas.fill();
+        }
+
+        function multiloop(){
+            for(var i =0;i<100;i++){
+                renderCanvas();
+            }
+        }
+
+        multiloop();
+    </script>
+
+</body>
+
+</html>

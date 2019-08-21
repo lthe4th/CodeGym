@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validateAccount(str) {
+            var pattern = /^([a-z0-9_]{6,})$/;
+            if(pattern.test(str)){
+                alert('you can use it');
+            }else{
+                alert('you can\' use it');
+            }
+        }
+
+        var account = prompt('account id ? ');
+        validateAccount(account)
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function checkUsZipCode(str){
+
+            var patternUS = /^[0-9]{5}(?:-[0-9]{4})?$/;
+            if(patternUS.test(str)){
+                return true;
+            }else{
+                return  false;
+            }
+            
+        }
+
+
+        var str = prompt('zip code ?')
+        console.log(checkUsZipCode(str))
+    </script>
+    
+</body>
+</html>

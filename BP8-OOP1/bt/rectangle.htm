@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id="myCanvas" width="1366" height="768" style="border: black solid 1px"></canvas>
+
+    <script>
+        class Rectangle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.area = this.x * this.y;
+                this.perimeter = (this.x + this.y) * 2;
+            }
+
+            getArea() {
+                return document.write(this.area);
+            }
+
+            getPerimeter() {
+                return document.write(this.perimeter);
+            }
+
+            renderRectangle(x,y) {
+                var ctx = document.getElementById("myCanvas").getContext('2d');
+                ctx.rect(x, y, this.x, this.y);
+                ctx.stroke();
+            }
+
+        }
+
+        var rectangle = new Rectangle(150, 100);
+        rectangle.renderRectangle(500,500);
+    </script>
+
+</body>
+
+</html>

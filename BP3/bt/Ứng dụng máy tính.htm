@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <br><br>
+    <button onclick="calculate(this.value);" value="+">Addition(+)</button>
+    <button onclick="calculate(this.value);" value="-">Subtraction(-)</button>
+    <button onclick="calculate(this.value);" value="*">Multiplication(x)</button>
+    <button onclick="calculate(this.value);" value="/">Division(/)</button>
+    
+    <script>
+
+        function calculate(value){
+            var numb1 = +document.getElementById('number1').value;
+            var numb2 = +document.getElementById('number2').value;
+            if(value === "+"){
+                alert(numb1 + numb2);
+            }
+            if(value === "-"){
+                alert(numb1 - numb2);
+            }
+            if(value === "*"){
+                alert(numb1 * numb2);
+            }
+            if(value === "/"){
+                alert(numb1 / numb2);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

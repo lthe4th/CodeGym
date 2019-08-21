@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="play()">Play!</button>
+    <script>
+        function play() {
+            var a = +prompt('first ? ');
+            var b = +prompt('last ? ');
+            var c = Math.floor(Math.random() * b + a)
+            var guessing = +prompt('what number ?')
+
+            if (guessing === c) {
+                return alert('you won');
+            } else {
+                if (guessing < c) {
+                     alert('bigger');
+                } else {
+                     alert('smaller')
+                }
+            }
+            for (i = 0; i < 3; i++) {
+                guessing = +prompt('again, what number ?') 
+                    if (guessing === c) {
+                        alert('you won');
+                        break;
+                    } else {
+                        if (guessing < c) {
+                            alert('bigger');
+                        } else {
+                            alert('smaller')
+                        }
+                    }
+                }
+
+            }
+    </script>
+
+</body>
+
+</html>

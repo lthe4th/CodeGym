@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .img {
+        width: 200px;
+
+
+    }
+</style>
+
+<body>
+    <img src="" alt="head" id="01" onclick="changePuzzle(this.id);" style="width: 400px" style="height: 400"> <br>
+    <img src="" alt="body" id="02" onclick="changePuzzle(this.id);" style="width: 400px" style="height: 400"> <br>
+    <img src="" alt="body" id="03" onclick="changePuzzle(this.id);" style="width: 400px" style="height: 400"> <br>
+    <img src="" alt="body" id="04" onclick="changePuzzle(this.id);" style="width: 400px" style="height: 400"> <br>
+    <img src="" alt="tail" id="05" onclick="changePuzzle(this.id);" style="width: 400px" style="height: 400"> <br>
+
+</body>
+<script>
+    var head = ["image/cat1.jpg", "image/monk1.jpg", "image/panda1.jpg"];
+    var body1 = ["image/cat2.jpg", "image/monk2.jpg", "image/panda2.jpg"];
+    var body2 = ["image/cat3.jpg", "image/monk3.jpg", "image/panda3.jpg"];
+    var body3 = ["image/cat4.jpg", "image/monk4.jpg", "image/panda4.jpg"];
+    var tail = ["image/cat5.jpg", "image/monk5.jpg", "image/panda5.jpg"];
+
+    document.getElementById('01').src = head[Math.floor(Math.random() * 3)];
+    document.getElementById('02').src = body1[Math.floor(Math.random() * 3)];
+    document.getElementById('03').src = body2[Math.floor(Math.random() * 3)];
+    document.getElementById('04').src = body3[Math.floor(Math.random() * 3)];
+    document.getElementById('05').src = tail[Math.floor(Math.random() * 3)];
+
+    function changePuzzle(id) {
+
+        if (id === "01") {
+            document.getElementById('01').src = head[Math.floor(Math.random() * 3)];
+            checkWin()
+
+        }
+
+        if (id === "02") {
+            document.getElementById('02').src = body1[Math.floor(Math.random() * 3)];
+            checkWin()
+        }
+
+        if (id === "03") {
+            document.getElementById('03').src = body2[Math.floor(Math.random() * 3)];
+            checkWin()
+        }
+
+        if (id === "04") {
+            document.getElementById('04').src = body3[Math.floor(Math.random() * 3)];
+            checkWin()
+        }
+
+        if (id === "05") {
+            document.getElementById('05').src = tail[Math.floor(Math.random() * 3)];
+            checkWin()
+        }
+
+
+    }
+
+
+    function checkWin() {
+        var flag = true;
+        if (document.getElementById('01').src === head[1]) {
+            if (document.getElementById('02').src === body1[1]) {
+                if (document.getElementById('03').src === body2[1]) {
+                    if (document.getElementById('04').src === body3[1]) {
+                        if (document.getElementById('05').src === tail[1]) {
+
+                        } else {
+                            flag = false;
+                        }
+                    } else {
+                        flag = false;
+                    }
+                } else {
+                    flag = false;
+                }
+            } else {
+                flag = false;
+            }
+        } else {
+            flag = false;
+        }
+
+        if (flag === true) {
+            alert('you win');
+        }
+    }
+</script>
+
+
+</html>
+
+<!-- FUCKKKKK -->

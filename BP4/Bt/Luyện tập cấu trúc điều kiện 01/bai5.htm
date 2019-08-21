@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var test = +prompt('first Test ? ');
+        var mtest = +prompt('middle test ?');
+        var ltest = +prompt('last test ?');
+
+        var average = (test + mtest*2 + ltest*3)/6;
+
+        if(average>=8){
+            alert('grade A');
+        }else{
+            if(average>=6.5){
+                alert('grade B')
+            }else{
+                if(average >= 5){
+                    alert('grade C')
+                }else{
+                    if(average>=3.5){
+                        alert('grade D')
+                    } else {
+                        alert('u suck')
+                    }
+                }
+            }
+        }
+    
+    </script>
+    
+</body>
+</html>

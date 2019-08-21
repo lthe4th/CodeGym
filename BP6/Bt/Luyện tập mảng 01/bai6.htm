@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inputnumber">
+    <button onclick="arrayAdd()">addArray</button>
+    <br>
+    <input type="number" id="checknumber">
+    <button onclick="check();">check</button>
+    <p id="result"></p>
+    <script>
+        var array = [];
+
+        function arrayAdd() {
+            var x = document.getElementById('inputnumber').value;
+            if (x === "") {
+                return alert('invalid input');
+            }
+
+            array.push(x);
+
+        }
+
+        function check() {
+            var x = document.getElementById('checknumber').value;
+            for (var i = 0;i<array.length;i++){
+                if(x===array[i]){
+                   return alert('V is in the array');
+                } else if (i+1===array.length){
+                    alert('V is not in the array');
+                }
+            }
+            }
+        
+    </script>
+
+</body>
+
+</html>

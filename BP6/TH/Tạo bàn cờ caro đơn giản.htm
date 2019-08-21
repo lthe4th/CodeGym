@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>caro game</h1>
+    <p id="boardgame"></p>
+
+    <script>
+        var board = document.getElementById('boardgame');
+        var data = "";
+        var boarddata = [];
+        for (i = 0; i < 5; i++) {
+            boarddata[i] = [0, 0, 0, 0, 0];
+        }
+
+        function renderBoard() {
+            data = ""
+            data += '<table>'
+            for (i = 0; i < 5; i++) {
+                data += '<tr>';
+                for (j = 0; j < 5; j++) {
+                    data += '<td>' + boarddata[i][j] + '</td>';
+                }
+                data += '</tr>'
+
+            }
+            data += '</table>'
+            board.innerHTML = data
+        }
+        renderBoard()
+
+
+
+        function change() {
+            var flag = true;
+            var x = +prompt("x ?");
+            var y = +prompt('y ?');
+            if (flag) {
+                boarddata[x][y] = 'x';
+                flag=false;
+            }else{
+                boarddata[x][y] = 'y';
+                flag=true;
+            }
+            renderBoard();
+        }
+    </script>
+    <button onclick='change()'>change</button>
+
+</body>
+
+</html>

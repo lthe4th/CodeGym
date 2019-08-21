@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+
+            constructor(c) {
+                this.celcius = c;
+                this.fahrenheit = this.celcius * 1.8 + 32;
+                this.kelvin = this.celcius + 273.15;
+            }
+
+            getFahrenheit() {
+                return document.write(this.fahrenheit + ' F' + '<br>');
+            }
+
+            getKelvin() {
+                return document.write(this.kelvin + ' K'  + '<br>');
+            }
+
+        }
+
+
+        var nowtemp = new Temperature(25)
+        nowtemp.getFahrenheit();
+        nowtemp.getKelvin();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var income = +prompt('total income ?');
+
+        var rose;
+
+        if (income > 50000000) {
+            rose = income * 10 / 100;
+        } else {
+            if (income > 30000000) {
+                rose = income * 5 / 100;
+            }else{
+                if(income > 10000000){
+                    rose = income * 3 / 100;
+                }else{
+                    rose = 0;
+                }
+            }
+        }
+
+        alert('rose: '+ rose + ' vnd')
+    </script>
+</body>
+
+</html>

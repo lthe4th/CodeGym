@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var number = +prompt('input kwh');
+        var price
+        if (number <= 50) {
+            price = number * 1549;
+        } else {
+            if (number <= 100) {
+                price = number * 1600;
+            } else {
+                if (number <= 200) {
+                    price = number * 1858;
+                } else {
+                    if (number <= 300) {
+                        price = number * 2340;
+                    }
+                }
+            }
+        }
+        alert('price : ' + price + ' vnd')
+    </script>
+
+</body>
+
+</html>

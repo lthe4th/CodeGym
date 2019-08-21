@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .calculator{
+        border: 5px solid black;
+        width: 300px;
+        position: absolute;
+        height: 280px;
+        
+
+    }
+    .screen{
+
+        width: 300px;
+        border: 0.5px solid black;
+        border-width: 1px;
+        font-size : 2rem;
+        text-align: right;
+        background-color: white;
+        color:black;
+        grid-gap: 20px;
+        
+        }
+    .key{
+         height: 50px;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 20px;
+         padding: 20px;
+         color: blue;
+    }
+    button{
+        height: 35px;
+        background-color: white;
+
+        border: 2px solid gray;
+        color: blue;
+
+    }
+
+    </style>
+    
+    <div class="calculator">
+        <input type="text" value="0" id="ketqua" class="screen" disabled>
+            <div class="key" onclick="Bigone();">
+                <button value="7" onclick="ketqua.value+=this.value">7</button>
+                <button value="8" onclick="ketqua.value+=this.value">8</button>
+                <button value="9" onclick="ketqua.value+=this.value">9</button>
+                <button class="opera" value="+"onclick="ketqua.value+=this.value" >+</button>
+                
+                <button value="4" onclick="ketqua.value+=this.value">4</button>
+                <button value="5" onclick="ketqua.value+=this.value">5</button>
+                <button value="6" onclick="ketqua.value+=this.value">6</button>
+                <button class="opera" value="-"onclick="ketqua.value+=this.value">-</button>
+                
+                <button value="1" onclick="ketqua.value+=this.value">1</button>
+                <button value="2" onclick="ketqua.value+=this.value">2</button>
+                <button value="3" onclick="ketqua.value+=this.value">3</button>
+                <button class="opera" value="*"onclick="ketqua.value+=this.value">x</button>
+                
+                <button class="all-clear" onclick="ketqua.value=0">C</button>
+                <button value="0" onclick="ketqua.value+=this.value">0</button>
+                <button class="equal-sign" onclick="ketqua.value = eval(ketqua.value)">=</button>
+                <button class="opera" value="/" onclick="ketqua.value+=this.value">/</button>
+                
+            </div>
+
+    </div>
+
+</body>
+</html>

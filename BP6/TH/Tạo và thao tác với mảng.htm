@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputtext">
+    <button onclick="add()">Add</button>
+    <button onclick="display();">Display</button>
+    <br>
+    <p id="result" ></p>
+    <script>
+    
+    var Arr = [];
+    var index = 0;
+    function add(){
+        var x = document.getElementById('inputtext').value;
+        Arr.push(x);
+        var message= x + ' added to Array at Arr['+index +']';
+        showresult(message);
+        index++;
+
+    }
+
+
+
+    function showresult(message){
+       var mess = document.getElementById('result');
+        mess.innerHTML=message;
+    }
+
+    function display(){
+        var data=""
+        for(i=0;i<Arr.length;i++){
+            data+=Arr[i]+' at Arr[' +i+ ']' + '<br>';
+        }
+
+        showresult(data)
+
+
+    }
+
+
+
+    </script>
+
+
+</body>
+</html>

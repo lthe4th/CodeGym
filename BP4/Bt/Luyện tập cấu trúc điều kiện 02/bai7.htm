@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        alert('a(x2) + b(x) +c = 0 ?');
+        var a = +prompt('a ? (a!=0)');
+        var b = +prompt('b ?');
+        var c = +prompt('c ?');
+        if(a === 0){
+            alert('we don\'t do that here');
+        }
+
+
+        var delta = b*b - 4*a*c;
+        console.log(delta)
+        if(delta < 0){
+            alert('no x can be found');
+        }
+        if(delta === 0 ){
+            var x = (-b)/2*a
+            console.log (x)
+            alert('x1=x2 = '+x);
+        }
+        if(delta >0){
+            var x1 = ((-b)+Math.sqrt(delta))/2*a;
+            var x2 = ((-b)-Math.sqrt(delta))/2*a;
+            alert('x1: ' +  x1 +' x2: ' + x2 );
+        }
+
+    
+    
+    </script>
+    
+</body>
+</html>

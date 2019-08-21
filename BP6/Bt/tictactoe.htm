@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>tic tac toe</h1>
+    <p id="board"></p>
+    <button onclick="changefunction()">play</button>
+    <script>
+        var b = document.getElementById('board');
+        var Arr = [];
+        for (var i = 0; i < 3; i++) {
+            Arr[i] = new Array("-", "-", "-");
+        }
+
+        function render() {
+            data = "";
+            data += "<table>"
+            for (var i = 0; i < 3; i++) {
+                data += '<tr>'
+                for (var j = 0; j < 3; j++) {
+                    data += '<td>' +
+                        Arr[i][j] + '&ensp;'
+                    '</td>'
+                }
+                data += '</tr>'
+            }
+            data += '</table>'
+            b.innerHTML = data;
+        }
+
+        render();
+        var player = true;
+
+        function changefunction() {
+            var x = +prompt('x ?');
+            var y = +prompt('y ?');
+            checkplayer(x, y)
+            render();
+
+        }
+
+        function checkplayer(x, y) {
+            if (player === true) {
+                functionX(x, y);
+            } else {
+                functionY(x, y);
+            }
+        }
+
+        function functionX(x, y) {
+            if (Arr[x][y] === 'o') {
+                return alert('invalid move')
+            }
+            Arr[x][y] = 'x';
+            player = false;
+        }
+
+        function functionY(x, y) {
+            if (Arr[x][y] === 'x') {
+                return alert('invalid move')
+            }
+            Arr[x][y] = 'o';
+            player = true;
+        }
+        
+       //not done yet
+
+    </script>
+
+</body>
+
+</html>
